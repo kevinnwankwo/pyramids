@@ -1,0 +1,18 @@
+# Number of rows for each pyramid
+rows = 5
+
+# Loop to print the rows from top (narrowest) to bottom (widest)
+for i in range(1, rows + 1):
+    # Left pyramid components
+    left_spaces = " " * (rows - i)
+    left_stars = "* " * i
+    
+    # Right pyramid components
+    right_spaces = " " * (rows - i)
+    right_stars = "* " * i
+    
+    # Dynamic central gap between the two upright pyramids
+    central_gap = " " * (1 * (rows - i))
+    
+    # Combine and print the entire line
+    print(left_spaces + left_stars + central_gap + right_spaces + right_stars)
